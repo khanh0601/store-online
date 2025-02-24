@@ -3,7 +3,8 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import "../styles/global.css";
-
+import { GsapProvider } from "../util/GsapProvider";
+import Cursor from "@/components/Cursor";
 export default function RootLayout({
   children,
 }: {
@@ -19,10 +20,13 @@ export default function RootLayout({
 
       <body className="body">
         <Providers>
-          <Header />
-          {children}
-          <Footer />
-          <ScrollToTop />
+          <GsapProvider>
+            <Cursor />
+            <Header />
+            {children}
+            <Footer />
+            <ScrollToTop />
+          </GsapProvider>
         </Providers>
       </body>
     </html>
