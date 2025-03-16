@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
-    title: "Sign In",
+    title: "Đăng Nhập",
 };
 
 const SignInPage = async (props: {

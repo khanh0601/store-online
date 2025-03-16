@@ -13,9 +13,9 @@ import { z } from "zod";
 export const signInFormSchema = z.object({
     email: z
         .string()
-        .nonempty("Email required")
-        .email("Please provide a properly formatted email address"),
-    password: z.string().min(6, "Password must be at 6 characters long"),
+        .nonempty("Bắt buộc nhập Email")
+        .email("Vui lòng nhập đúng địa chỉ Email"),
+    password: z.string().min(6, "Mật khẩu ít nhất phải dài 6 kí tự"),
     rememberMe: z.boolean().optional(),
 });
 
@@ -23,32 +23,32 @@ export const signInFormSchema = z.object({
 export const signUpFormSchema = z.object({
     firstName: z
         .string()
-        .nonempty({ message: "Please enter your first name" })
-        .min(2, "First name must be at least 2 characters long"),
+        .nonempty({ message: "Vui lòng nhập họ của bạn" })
+        .min(2, "Họ của bạn ít nhất phải 2 kí tự"),
     lastName: z
         .string()
-        .nonempty({ message: "Please enter your last name" })
-        .min(2, "Last name must be at least 2 characters long"),
+        .nonempty({ message: "Vui lòng nhập tên của bạn" })
+        .min(2, "Tên của bạn ít nhất phải có 2 kí tự"),
     email: z
         .string()
-        .nonempty("Please enter your email")
-        .email("Please provide a valid email address"),
+        .nonempty("Vui lòng nhập email")
+        .email("Vui lòng nhập đúng địa chỉ email"),
     inviteCode: z.string().optional(),
     password: z
         .string()
-        .min(8, "Password must be at least 8 characters long")
-        .regex(/[a-z]/, "Password must include at least one lowercase letter")
-        .regex(/[A-Z]/, "Password must include at least one uppercase letter")
+        .min(8, "Mật khẩu ít nhất phải 8 kí tự")
+        .regex(/[a-z]/, "Mật khẩu phải bao gồm ít nhất 1 chữ thường")
+        .regex(/[A-Z]/, "Mật khẩu phải bao gồm ít nhất 1 chữ hoa")
         .regex(
             /^(?=.*[0-9!@#$%^&*(),.?":{}|<>]).*$/,
-            "Password must include at least one number or special character"
+            "Mật khẩu phải bao gồm ít nhất 1 kí tự số hoặc kí tự đặc biệt"
         ),
     phoneNumber: z
         .string()
-        .nonempty("Please enter your phone number")
-        .refine(isValidPhoneNumber, { message: "Invalid phone number" }),
+        .nonempty("Vui lòng nhập số điện thoại")
+        .refine(isValidPhoneNumber, { message: "Số điện thoại sai" }),
     consent: z.boolean().refine((val) => val === true, {
-        message: "You must agree to the terms and conditions to proceed",
+        message: "Bạn phải đồng ý điều khoản và chính sách của chúng tôi để tiếp tục",
     }),
 });
 

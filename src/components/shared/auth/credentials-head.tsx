@@ -26,11 +26,11 @@ export default function CredentialsHead({
             ) : (
                 <div className="max-w-[15rem] pb-6">
                     <ImagePlaceholder
-                        src={"/icons/logo.svg"}
+                        src={"/images/logo.png"}
                         alt="X Icon"
                         width={60}
                         height={60}
-                        className="h-[6rem] w-[6rem]"
+                        className="h-[5rem] w-[5rem]"
                     />
                 </div>
             )}

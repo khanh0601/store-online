@@ -9,7 +9,7 @@ const NotFoundPage = () => {
         <div className="flex min-h-screen flex-col items-center justify-center">
             <ImagePlaceholder
                 alt={`${APP_NAME} logo`}
-                src="/icons/logo.svg"
+                src="/images/logo.png"
                 height={48}
                 width={48}
                 priority

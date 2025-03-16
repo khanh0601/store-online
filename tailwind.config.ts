@@ -111,6 +111,9 @@ export default {
             DEFAULT: "250ms",
         },
         extend: {
+            maxWidth: {
+                'wrapper': '1728px', // Tạo class max-w-wrapper
+              },
             colors: {
                 background: "hsl(var(--background))",
                 foreground: "hsl(var(--foreground))",

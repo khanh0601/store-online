@@ -59,12 +59,12 @@ export default function VerifyModule() {
         <div className="flex flex-col">
             <CredentialsHead
                 title={
-                    isSuccess ? "Verify Account is Success" : "Verify Account"
+                    isSuccess ? "Kiểm tra tài khoản thành công" : "Kiểm tra tài khoản"
                 }
                 desc={
                     isSuccess
-                        ? `You will be redirected to the sign in page in ${timer} seconds`
-                        : "Please wait, we are verifying your account"
+                        ? `Bạn sẽ chuyển tới trang đăng nhập trong ${timer} giây`
+                        : "Vui lòng chờ, chúng tôi đang kiểm tra tài khoản của bạn"
                 }
                 isLoading={isVerifying}
             />

@@ -17,7 +17,7 @@ export default function UserLayout({
                         <Link href="/" className="flex-start">
                             <ImagePlaceholder
                                 alt={`${APP_NAME} logo`}
-                                src="/icons/logo.svg"
+                                src="/logo.png"
                                 height={48}
                                 width={48}
                                 priority

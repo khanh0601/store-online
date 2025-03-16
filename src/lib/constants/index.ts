@@ -1,4 +1,4 @@
-export const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || "CaskX Exchange";
+export const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || "KayC Room";
 
 export const APP_DESCRIPTION =
     process.env.NEXT_PUBLIC_APP_DESCRIPTION ||
@@ -79,25 +79,25 @@ export const passwordConstraintContent: {
     {
         id: 1,
         name: "minLength",
-        message: "Password must be at least 8 characters",
+        message: "Mật khẩu ít nhất có 8 kí tự",
         regex: /^.{8,}$/,
     },
     {
         id: 2,
         name: "lowercase",
-        message: "Must contain at least 1 lowercase letter",
+        message: "Mật khẩu ít nhất có 1 chữ thường",
         regex: /^(?=.*[a-z]).*$/,
     },
     {
         id: 3,
         name: "uppercase",
-        message: "Must contain at least 1 uppercase letter",
+        message: "Mật khẩu ít nhất có 1 chữ hoa",
         regex: /^(?=.*[A-Z]).*$/,
     },
     {
         id: 4,
         name: "number",
-        message: "Must contain at least 1 number or special character",
+        message: "Mật khẩu có 1 kí tự số hoặc kí tự đặc biệt",
         regex: /^(?=.*[0-9!@#$%^&*(),.?":{}|<>]).*$/,
     },
 ];

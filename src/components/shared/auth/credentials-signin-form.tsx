@@ -55,7 +55,7 @@ const CredentialsSignInForm = () => {
         if (result?.status === 401) {
             form.setError("root", {
                 type: "manual",
-                message: result?.error || "Invalid email or password",
+                message: result?.error || "Email hoặc mật khẩu không đúng",
             });
         } else if (result?.status === 200 || result?.status === 201) {
             setRememberLS(!!data?.rememberMe);
@@ -72,7 +72,7 @@ const CredentialsSignInForm = () => {
                 variant="default"
                 type="submit"
             >
-                {form.formState.isSubmitting ? "Logging In..." : "Login"}
+                {form.formState.isSubmitting ? "Đang đăng nhập..." : "Đăng nhập"}
             </Button>
         );
     };
@@ -117,7 +117,7 @@ const CredentialsSignInForm = () => {
                                 render={({ field }) => (
                                     <div className="space-y-1.5">
                                         <Label htmlFor="password">
-                                            Password
+                                            Mật khẩu
                                         </Label>
                                         <FormControl>
                                             <Input
@@ -151,7 +151,7 @@ const CredentialsSignInForm = () => {
                                                         }
                                                     />
                                                     <Label htmlFor="remember">
-                                                        Remember me
+                                                        Ghi nhớ tôi
                                                     </Label>
                                                 </div>
                                             </FormControl>
@@ -162,7 +162,7 @@ const CredentialsSignInForm = () => {
                                                 target="_self"
                                                 className="text-underline text-base text-typo-body"
                                             >
-                                                Forgot password?
+                                                Quên mật khẩu?
                                             </Link>
                                         </div>
                                     );
@@ -174,13 +174,13 @@ const CredentialsSignInForm = () => {
                             <SignInButton />
                         </div>
                         <div className="text-center text-base text-typo-disable">
-                            Don&apos;t have an account?{" "}
+                            Chưa có tài khoản?{" "}
                             <Link
                                 href="/sign-up"
                                 target="_self"
                                 className="text-underline text-typo-body"
                             >
-                                Sign up
+                                Đăng ký 
                             </Link>{" "}
                         </div>
                     </div>

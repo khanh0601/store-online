@@ -45,7 +45,7 @@ const CredentialsSignUpForm = () => {
                 type: "manual",
                 message:
                     (error as { message?: string })?.message ||
-                    "Something went wrong",
+                    "Đã có lỗi từ server",
             });
         }
     };
@@ -61,8 +61,8 @@ const CredentialsSignUpForm = () => {
                 type="submit"
             >
                 {form.formState.isSubmitting
-                    ? "Submitting..."
-                    : "Create new account"}
+                    ? "Đang đăng ký..."
+                    : "Đăng ký"}
             </Button>
         );
     };
@@ -82,7 +82,7 @@ const CredentialsSignUpForm = () => {
                             render={({ field }) => (
                                 <div className="space-y-1.5">
                                     <Label htmlFor="firstName">
-                                        First name
+                                        Họ của bạn
                                     </Label>
                                     <FormControl>
                                         <Input
@@ -90,7 +90,7 @@ const CredentialsSignUpForm = () => {
                                             type="text"
                                             required
                                             autoComplete="given-name"
-                                            placeholder="Ex: John"
+                                            placeholder="Ex: Trần"
                                             {...field}
                                         />
                                     </FormControl>
@@ -103,14 +103,14 @@ const CredentialsSignUpForm = () => {
                             control={form.control}
                             render={({ field }) => (
                                 <div className="space-y-1.5">
-                                    <Label htmlFor="lastName">Last name</Label>
+                                    <Label htmlFor="lastName">Tên của bạn</Label>
                                     <FormControl>
                                         <Input
                                             id="lastName"
                                             type="text"
                                             required
                                             autoComplete="family-name"
-                                            placeholder="Ex: Doe"
+                                            placeholder="Ex: Khánh"
                                             {...field}
                                         />
                                     </FormControl>
@@ -123,7 +123,7 @@ const CredentialsSignUpForm = () => {
                             control={form.control}
                             render={({ field }) => (
                                 <div className="space-y-1.5">
-                                    <Label htmlFor="phoneNumber">Phone</Label>
+                                    <Label htmlFor="phoneNumber">Số điện thoại</Label>
                                     <FormControl>
                                         <PhoneInput
                                             id="phoneNumber"
@@ -147,7 +147,7 @@ const CredentialsSignUpForm = () => {
                             render={({ field }) => (
                                 <div className="space-y-1.5">
                                     <Label htmlFor="inviteCode">
-                                        Invite code
+                                        Mã code mời(nếu có)
                                     </Label>
                                     <FormControl>
                                         <Input
@@ -177,7 +177,7 @@ const CredentialsSignUpForm = () => {
                                             type="text"
                                             required
                                             autoComplete="email"
-                                            placeholder="Ex: johndoe@gmail.com"
+                                            placeholder="Ex: khanhtran@gmail.com"
                                             {...field}
                                         />
                                     </FormControl>
@@ -190,7 +190,7 @@ const CredentialsSignUpForm = () => {
                             control={form.control}
                             render={({ field }) => (
                                 <div className="space-y-1.5">
-                                    <Label htmlFor="password">Password</Label>
+                                    <Label htmlFor="password">Mật khẩu</Label>
                                     <FormControl>
                                         <Input
                                             id="password"
@@ -226,13 +226,13 @@ const CredentialsSignUpForm = () => {
                                         htmlFor="consent"
                                         className="font-normal text-typo-disable"
                                     >
-                                        I have read and agree to the{" "}
+                                        Tôi đã đọc và đồng ý với{" "}
                                         <Link
                                             href="#"
                                             target="_blank"
                                             className="text-underline text-typo-body"
                                         >
-                                            Terms of Service
+                                            Điều khoản
                                         </Link>{" "}
                                         and{" "}
                                         <Link
@@ -240,7 +240,7 @@ const CredentialsSignUpForm = () => {
                                             target="_blank"
                                             className="text-underline text-typo-body"
                                         >
-                                            Privacy Policy
+                                            Chính sách
                                         </Link>
                                     </Label>
                                 </div>
@@ -253,13 +253,13 @@ const CredentialsSignUpForm = () => {
                         <SignUpButton />
                     </div>
                     <div className="text-center text-base text-typo-disable">
-                        Already have an account?{" "}
+                        Bạn đã có tại khoản rồi?{" "}
                         <Link
                             href="/sign-in"
                             target="_self"
                             className="text-underline text-typo-body"
                         >
-                            Sign in
+                            Đăng Nhập
                         </Link>
                     </div>
                 </div>

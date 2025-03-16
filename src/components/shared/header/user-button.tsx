@@ -20,7 +20,7 @@ const UserButton = () => {
             <Button asChild>
                 <Link href="/sign-in">
                     <UserIcon />
-                    Sign in
+                    Đăng Nhập
                 </Link>
             </Button>
         );

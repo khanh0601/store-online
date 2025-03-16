@@ -27,10 +27,10 @@ const ModeToggle = () => {
             <DropdownMenuTrigger asChild>
                 <Button
                     variant="ghost"
-                    className="focus-visible:ring-0 focus-visible:ring-offset-0"
+                    className="focus-visible:ring-0 focus-visible:ring-offset-0 min-w-14 bg-[hsl(var(--dark-100))] [&_svg]:size-6"
                 >
                     {theme === "light" ? (
-                        <SunIcon />
+                        <SunIcon/>
                     ) : theme === "dark" ? (
                         <MoonIcon />
                     ) : (

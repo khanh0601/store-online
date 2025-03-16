@@ -15,7 +15,7 @@ export default function ResetPasswordModule() {
             {data?.status === "success" ? (
                 <CredentialsHead
                     title={"You have successfully reset your password"}
-                    desc="Please sign in with your new password."
+                    desc="Vui lòng đăng nhập với mật khẩu mới của bạn."
                     breadcrumb
                 />
             ) : (

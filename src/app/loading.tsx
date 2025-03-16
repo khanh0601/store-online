@@ -4,7 +4,7 @@ import loader from "@/assets/loader.gif";
 const LoadingPage = () => {
     return (
         <div className="flex h-screen w-full items-center justify-center">
-            <Image src={loader} height={150} width={150} alt="loading" />
+            <Image src={loader} height={100} width={100} alt="loading" />
         </div>
     );
 };
