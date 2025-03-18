@@ -5,7 +5,7 @@ import Menu from "./menu";
 import Search from "./search";
 const Header = () => {
     return (
-        <header className="w-full border-b">
+        <header className="w-full  shadow-md relative z-10">
             <div className="wrapper flex-between relative">
                 <div className="flex-start">
                     <Link href="/" className="flex-start">
@@ -21,6 +21,7 @@ const Header = () => {
                 </div>
                 <Search />
                 <Menu />
+                
             </div>
         </header>
     );

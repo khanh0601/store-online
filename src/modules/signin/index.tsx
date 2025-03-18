@@ -4,7 +4,7 @@ import CredentialsSignInForm from "@/components/shared/auth/credentials-signin-f
 export default function SignInModule() {
     return (
         <div className="flex flex-col">
-            <CredentialsHead title="Đăng Nhập" />
+            <CredentialsHead title="Sign In" />
             <CredentialsSignInForm />
         </div>
     );

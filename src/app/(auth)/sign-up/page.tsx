@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import SignUpModule from "@/modules/signup";
 
 export const metadata: Metadata = {
-    title: "Đăng Ký",
+    title: "Sign Up",
 };
 
 const SignUpPage = async (props: {

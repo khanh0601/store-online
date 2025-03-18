@@ -1,3 +1,4 @@
+'use client'
 import { EllipsisVertical, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -10,20 +11,34 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet";
 import UserButton from "./user-button";
-import Image from "next/image";
+import {useState} from 'react'
 import Message from "./message";
+import Notify from "./notify";
+import Image from "next/image";
 
 const Menu = () => {
+    const [isOpenNotify,setIsOpenNotify] = useState<boolean>(false);
+    const [isOpenMessage,setIsOpenMessage] = useState<boolean>(false);
+    const handleOpenNotify = () => {
+        setIsOpenNotify((prev) => !prev);
+        if (isOpenMessage) setIsOpenMessage(false); // Đảm bảo Message đóng khi Notify mở
+    };
+
+    const handleOpenMessage = () => {
+        setIsOpenMessage((prev) => !prev);
+        if (isOpenNotify) setIsOpenNotify(false); // Đảm bảo Notify đóng khi Message mở
+    };
     return (
         <div className="flex justify-end gap-3">
             <div className="hidden md:flex w-full"></div>
             <nav className="hidden w-full  gap-3 md:flex ">
                 <ModeToggle />
                 {/* <UserButton /> */}  
-                <Message/>
-                <div className="w-12 flex bg-[rgb(226,229,233)] p-3 rounded-full ">
-                    <Image alt="Icon Message" src="/icons/ic-notify.svg" width={30} height={30} className="w-full"/>
-                </div>
+                <Message isOpen={isOpenMessage} handleOpen={handleOpenMessage}/>
+                <Notify isNotify = {isOpenNotify} handleOpen={handleOpenNotify}/>
+                <Link href='#' className="w-12 rounded-full">
+                    <Image src='/images/person-default.svg' alt="Avatar User" width={40} height={40} className="w-full h-full"/>
+                </Link>
             </nav>
             <nav className="md:hidden">
                 <Sheet>

@@ -16,7 +16,7 @@ export default function SignUpModule() {
 
     return (
         <div className="flex flex-col">
-            <CredentialsHead title="Tạo tài khoản mới" />
+            <CredentialsHead title="Create new account" />
             <CredentialsSignUpForm />
         </div>
     );

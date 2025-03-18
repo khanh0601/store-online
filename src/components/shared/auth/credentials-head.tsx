@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import ImagePlaceholder from "../image-placeholder";
+import { ROUTE_AUTH } from "@/lib/constants/route";
 
 export default function CredentialsHead({
     title = "Page Title",
@@ -17,7 +18,7 @@ export default function CredentialsHead({
     return (
         <div className="flex-center flex-col pb-8 text-center">
             {breadcrumb ? (
-                <Link href="/sign-in">
+                <Link href={ROUTE_AUTH.SIGNIN}>
                     <Button variant="ghost" className="mb-8 min-w-0" size="sm">
                         <ChevronLeft className="h-4 w-4" />
                         Back
@@ -26,11 +27,11 @@ export default function CredentialsHead({
             ) : (
                 <div className="max-w-[15rem] pb-6">
                     <ImagePlaceholder
-                        src={"/images/logo.png"}
+                        src={"/icons/logo.svg"}
                         alt="X Icon"
                         width={60}
                         height={60}
-                        className="h-[5rem] w-[5rem]"
+                        className="h-[6rem] w-[6rem]"
                     />
                 </div>
             )}

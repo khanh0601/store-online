@@ -1,10 +1,11 @@
+import HomeModule from "@/modules/home";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-    title: "Trang chủ",
+    title: "Home Page",
 };
 
 const HomePage = async () => {
-    return <>Trang Chủ</>;
+    return <HomeModule />;
 };
 
 export default HomePage;
